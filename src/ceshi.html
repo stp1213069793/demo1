@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // console.log(date.toDateString(a));
+    // console.log(date.toTimeString(b));
+
+
+    var toMiner = function(hour, min, seconds) {
+        var miner;
+        miner = hour * (60 * 60 * 1000) + min * (60 * 1000) + seconds * 1000;
+        return miner;
+    };
+
+    var MODECONTENT = {
+        toMiner: toMiner(10, 54, 59), //时分秒转化为毫秒整数（例如：00:30:00）
+    }
+
+    function cc() {
+        var date = new Date();
+        var a = "2022 - 05 - 10 T10: 54: 59.000 Z";
+        var b = a.split('T')
+        console.log(b);
+        date.parse('2022 - 05 - 10')
+    }
+</script>
+
+<body>
+    <div class="he">
+        <button class="btn">
+            <!-- <img src="../src/assets/icon-update.png" alt=""> -->
+        </button>
+        <div class="conten">
+            <div class="left flex-colum">
+                <div class="h5ss">h5</div>
+                <div class="mobideo">mobideo</div>
+                <div class="info">DIGITIZING INDUSTRIAL SERVICES</div>
+            </div>
+            <div class="right flex-colum">
+                <div class="flex-column">
+                    <label for="">username</label>
+                    <input type="text">
+                </div>
+                <div class="flex-column mt-10">
+                    <label for="">password</label>
+                    <input type="text">
+                </div>
+                <div class="flex-column mt-10">
+                    <label for="">capth</label>
+                    <input type="text">
+                </div>
+                <button class="mt-10">login</button>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        margin: 0;
+    }
+    
+    .btn {
+        /* background-image: url(../src/assets/icon-delete.png);
+        background-size: auto;
+        background-repeat: no-repeat; */
+        /* border: 0; */
+        width: 24px;
+        height: 24px;
+        background: url("../src/assets/icon-update.png") no-repeat;
+        background-size: 24px 24px;
+        border-style: none;
+    }
+    /* img {
+        height: 24px;
+        width: 24px;
+    } */
+    
+    .he {
+        height: 100vh;
+        background: #f5f8fd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .conten {
+        width: 800px;
+        display: grid;
+        grid-template-columns: 2.7fr 3fr;
+        gap: 0 30px;
+        border: 14px solid #1e80e1;
+        padding: 40px;
+        font-size: 12px;
+    }
+    
+    .flex-colum {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .left {
+        /* background: #456ee8; */
+        /* height: 800px; */
+        /* background: #1e80e1; */
+        height: 478px;
+        background-color: #1e80e1;
+        transform: skewX(-10deg) translateX(40px);
+        z-index: 100;
+        color: #fff;
+    }
+    
+    .h5ss {
+        font-size: 60px;
+        padding: 20px;
+        color: #f5f8fd;
+        /* box-shadow: ; */
+        box-shadow: 0 2px 4px rgb(0 0 0 / 12%);
+    }
+    
+    .mobideo {
+        margin-top: 20px;
+    }
+    
+    .info {
+        margin-top: 20px;
+    }
+    
+    .right {
+        /* height: 800px; */
+        background: #fff;
+        min-height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px;
+        box-sizing: border-box;
+    }
+    
+    .mt-10 {
+        margin-top: 10px;
+    }
+    
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+
+</html>
